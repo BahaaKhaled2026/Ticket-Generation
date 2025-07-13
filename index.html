@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Generation</title>
+    <link rel="stylesheet" href="./assets/App.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/images/logo-full.svg" alt="Logo" />
+    </header>
+
+    <main>
+      <div class="txt">
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </div>
+      <form id="ticketForm" novalidate>
+        <div class="upload-box" id="uploadBox">
+          <label for="avatar">Upload Avatar</label>
+          <input
+            type="file"
+            id="avatar"
+            accept="image/png, image/jpeg"
+            hidden
+          />
+          <div class="upload-text" id="drop" onclick="triggerUpload()">
+            <img src="./assets/images/icon-upload.svg" alt="upload" />
+            <p>Drag and drop or click to upload</p>
+          </div>
+          <div class="upload-instructions">
+            <img src="./assets/images/icon-info.svg" alt="info" />
+            <p id="uploadInstructions">
+              Upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+          </div>
+        </div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+        <div class="name-info">
+          <img src="./assets/images/icon-info.svg" alt="info" />
+          <p id="nameError" class="error-message"></p>
+        </div>
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          placeholder="example@email.com"
+          id="email"
+          name="email"
+          required
+        />
+        <div class="email-info">
+          <img src="./assets/images/icon-info.svg" alt="info" />
+          <p id="emailError" class="error-message"></p>
+        </div>
+        <label for="github">GitHub Username</label>
+        <input
+          type="text"
+          placeholder="@yourusername"
+          id="github"
+          name="github"
+          required
+        />
+        <div class="github-info">
+          <img src="./assets/images/icon-info.svg" alt="info" />
+          <p id="githubError" class="error-message"></p>
+        </div>
+        <button class="upload-button" type="submit">Generate My Ticket</button>
+      </form>
+    </main>
+    <img
+      src="./assets/images/pattern-lines.svg"
+      class="lines-pattern"
+      alt="Decorative lines pattern"
+    />
+    <img
+      src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      alt="Decorative squiggly line"
+      class="squiggly-line-bottom"
+    />
+
+    <img
+      src="./assets/images/pattern-squiggly-line-top.svg"
+      alt="Decorative squiggly line"
+      class="squiggly-line-top"
+    />
+
+    <img
+      src="./assets/images/pattern-circle.svg"
+      class="circle-pattern-top"
+      alt="Decorative circle pattern"
+    />
+
+    <img
+      src="./assets/images/pattern-circle.svg"
+      class="circle-pattern-form"
+      alt="Decorative circle pattern"
+    />
+    <script src="main.js"></script>
+  </body>
+</html>
